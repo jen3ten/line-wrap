@@ -17,6 +17,7 @@ namespace cmm_console_app
             foreach (string paragraph in paragraphList)
             {
                 Console.WriteLine(paragraph);
+                Console.WriteLine("end of paragraph");
             }
 
             Console.ReadKey();
