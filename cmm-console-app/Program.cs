@@ -16,8 +16,8 @@ namespace cmm_console_app
             List<string> paragraphList = reader.ConvertTextFileToParagraphList(reader.StreamReader);
             foreach (string paragraph in paragraphList)
             {
-                Console.WriteLine(paragraph);
-                Console.WriteLine("end of paragraph");
+                reader.AddLineWrapToParagraph(paragraph);
+                Console.WriteLine();
             }
 
             Console.ReadKey();

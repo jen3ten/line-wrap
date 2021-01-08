@@ -54,5 +54,29 @@ namespace cmm_console_app
             return paragraphList;
         }
 
+        public void AddLineWrapToParagraph(string paragraph)
+        {
+            string character;
+            int index = 80;
+            do
+            {
+                do
+                {
+                    index--;
+                    character = paragraph.Substring(index, 1);
+                } while (character != " ");
+                Console.WriteLine(paragraph.Substring(0, index));
+                paragraph = paragraph.Substring(index + 1);
+                if(paragraph.Length < 80)
+                {
+                    index = paragraph.Length;
+                }
+                else
+                {
+                    index = 80;
+                }
+            } while (paragraph.Length > 0);
+        }
+
     }
 }
