@@ -14,7 +14,7 @@ namespace cmm_console_app
             bool response = reader.DefineStreamReader();
 
             List<string> paragraphList = reader.ConvertTextFileToParagraphList(reader.StreamReader);
-            foreach(string paragraph in paragraphList)
+            foreach (string paragraph in paragraphList)
             {
                 Console.WriteLine(paragraph);
             }

@@ -34,8 +34,31 @@ namespace cmm_console_app
                 //{
                 //    paragraphList.Add(line.Trim());
                 //}
-                line = stream.ReadLine();
-                paragraphList.Add(line);
+                line = "1" + stream.ReadLine();
+                int nextCharacter = stream.Peek();
+                Console.WriteLine($"The next character after 1st line break is {nextCharacter}, or {(char)nextCharacter}");
+                paragraphList.Add(line.Trim());
+
+                line = "2" + stream.ReadLine();
+                nextCharacter = stream.Peek();
+                Console.WriteLine($"The next character after 2nd line break is {nextCharacter}, or {(char)nextCharacter}");
+                paragraphList.Add(line.Trim());
+
+                line = "3" + stream.ReadLine();
+                nextCharacter = stream.Peek();
+                Console.WriteLine($"The next character after 3rd line break is {nextCharacter}, or {(char)nextCharacter}");
+                paragraphList.Add(line.Trim());
+
+                line = "4" + stream.ReadLine();
+                nextCharacter = stream.Peek();
+                Console.WriteLine($"The next character after 4th line break is {nextCharacter}, or {(char)nextCharacter}");
+                paragraphList.Add(line.Trim());
+
+                line = "5" + stream.ReadLine();
+                nextCharacter = stream.Peek();
+                Console.WriteLine($"The next character after 5th line break is {nextCharacter}, or {(char)nextCharacter}");
+                paragraphList.Add(line.Trim());
+
             }
             return paragraphList;
         }
