@@ -10,5 +10,5 @@ This application first converts the stream to a list of paragraphs with the Conv
 
 Individual paragraphs are printed to the console in substrings that are no longer than 80 characters with the AddLineWrapToParagraph() method.
 
-A screen shot of the result can be found in the [word-wrap-results.png] file.
+A screen shot of the result can be found in the [word-wrap-results.png](.word-wrap-results.png) file.
 
