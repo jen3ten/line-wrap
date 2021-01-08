@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace cmm_console_app
@@ -12,8 +13,13 @@ namespace cmm_console_app
             TextReader reader = new TextReader();
             bool response = reader.DefineStreamReader();
 
-            string textFile = reader.ConvertTextFileToString(reader.streamReader);
-            // Console.WriteLine(textFile);
+            List<string> paragraphList = reader.ConvertTextFileToParagraphList(reader.StreamReader);
+            foreach(string paragraph in paragraphList)
+            {
+                Console.WriteLine(paragraph);
+            }
+
+            Console.ReadKey();
         }
 
     }

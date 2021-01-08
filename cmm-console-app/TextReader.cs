@@ -7,13 +7,13 @@ namespace cmm_console_app
 {
     public class TextReader
     {
-        public StreamReader streamReader { get; set; }
+        public StreamReader StreamReader { get; set; }
 
         public bool DefineStreamReader()
         {
             try
             {
-                streamReader = new StreamReader("/Users/jenev/source/repos/cover-my-meds/cmm-console-app/cmm-console-app/article.txt");
+                StreamReader = new StreamReader("/Users/jenev/source/repos/cover-my-meds/cmm-console-app/cmm-console-app/article.txt");
                 return true;
             }
             catch (Exception e)
@@ -24,21 +24,20 @@ namespace cmm_console_app
             }
         }
 
-        public string ConvertTextFileToString(StreamReader stream)
+        public List<string> ConvertTextFileToParagraphList(StreamReader stream)
         {
-            string textString = "";
+            List<string> paragraphList = new List<string>();
             using (stream)
             {
-                string[] paragraphs;
-                paragraphs = stream.ReadToEnd().Split(new[] { '\r', '\n' });
-                foreach(string line in paragraphs)
-                {
-                    //textString += line + " ";
-                    Console.WriteLine(line);
-                }
-
-                return textString;
+                string line;
+                //while ((line = stream.ReadLine()) != null)
+                //{
+                //    paragraphList.Add(line.Trim());
+                //}
+                line = stream.ReadLine();
+                paragraphList.Add(line);
             }
+            return paragraphList;
         }
 
     }
